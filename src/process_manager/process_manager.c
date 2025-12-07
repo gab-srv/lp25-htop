@@ -1,9 +1,9 @@
 #include <stdlib.h>
 #include "../../include/process.h"
 #include "../../include/process_manager.h"
-#include "list_utils.c"
-#include "process_reader.c"
-#include "cpu_history.c"
+#include "../../include/list_utils.h"
+#include "../../include/process_reader.h"
+#include "../../include/cpu_history.h"
 
 process_node* get_local_process_list(int topN)
 {

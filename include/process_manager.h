@@ -2,8 +2,11 @@
 #define PROCESS_MANAGER_H
 
 #include "process.h"
+#include "list_utils.h"
+#include "process_reader.h"
+#include "cpu_history.h"
 
+/* Fonction principale pour obtenir la liste locale */
 process_node* get_local_process_list(int topN);
-void free_process_list(process_node *head);
 
-#endif
+#endif // PROCESS_MANAGER_H

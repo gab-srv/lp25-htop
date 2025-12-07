@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "../../include/process.h"
+#include "../../include/list_utils.h"
 
 void free_process_list(process_node *head){
     while (head){

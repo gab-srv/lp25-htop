@@ -9,9 +9,10 @@
 #include <signal.h>
 #include <errno.h>
 
+#include "../../include/process_reader.h"
 #include "../../include/process.h"
-#include "cpu_history.c"
-#include "list_utils.c"
+#include "../../include/cpu_history.h"
+#include "../../include/list_utils.h"
 
 #define MAX_LINE_LENGTH 1024
 #define MAX_SCAN_PIDS   4096

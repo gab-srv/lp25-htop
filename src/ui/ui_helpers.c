@@ -21,7 +21,7 @@ void draw_process_table(process_node* list, int selected) {
         mvprintw(row, 0, "%5d   %-10s  %8d   %-10s   %s",
             node->process.pid,
             node->process.user,
-            node->process.memory,
+            node->process.memory_kb,
             node->process.state,
             node->process.name
         );
