@@ -1,6 +1,6 @@
 #ifndef LIST_UTILS_H
 #define LIST_UTILS_H
-
+//inutile avec nouvelle version réseau
 #include "process.h"
 
 /* Libère toute une liste de processus */

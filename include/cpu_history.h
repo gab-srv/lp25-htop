@@ -1,6 +1,6 @@
 #ifndef CPU_HISTORY_H
 #define CPU_HISTORY_H
-
+//inutile avec nouvelle version réseau
 typedef struct {
     int pid;
     unsigned long long ticks;

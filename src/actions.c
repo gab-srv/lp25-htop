@@ -8,7 +8,7 @@
 #include <string.h>
 #include <sys/types.h>   /* pour pid_t si besoin */
 
-#include "../../include/actions.h"
+#include "../include/actions.h"
 
 /* fonctions simples envoyant les signaux */
 int action_stop(int pid){

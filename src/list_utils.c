@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "../../include/process.h"
 #include "../../include/list_utils.h"
-
+//inutile avec nouvelle version réseau
 void free_process_list(process_node *head){
     while (head){
         process_node *tmp = head;

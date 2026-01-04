@@ -1,6 +1,6 @@
 #ifndef PROCESS_MANAGER_H
 #define PROCESS_MANAGER_H
-
+//inutile avec nouvelle version réseau
 #include "process.h"
 #include "list_utils.h"
 #include "process_reader.h"

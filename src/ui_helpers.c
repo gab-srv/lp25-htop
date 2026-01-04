@@ -1,6 +1,6 @@
 #include <ncurses.h>
 #include "process.h"
-
+//inutile avec nouvelle version réseau
 void draw_process_table(process_node* list, int selected) {
     int row = 2;
     int index = 0;

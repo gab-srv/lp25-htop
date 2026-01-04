@@ -5,6 +5,6 @@
 #include "cpu_history.h"
 
 /* Fonction principale pour collecter les processus */
-int collect_all_processes(process_t **out_arr);
+int get_processes(process_t *list, int max);
 
 #endif // PROCESS_READER_H

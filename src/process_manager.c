@@ -4,7 +4,7 @@
 #include "../../include/list_utils.h"
 #include "../../include/process_reader.h"
 #include "../../include/cpu_history.h"
-
+//inutile avec nouvelle version réseau
 process_node* get_local_process_list(int topN)
 {
     process_t *all = NULL;

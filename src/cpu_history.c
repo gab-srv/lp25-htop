@@ -1,7 +1,7 @@
 #include "../../include/process.h"
 #include "../../include/cpu_history.h"
 #include <unistd.h>
-
+//inutile avec nouvelle version réseau
 unsigned long long g_prev_total = 0;
 prev_ticks_t g_prev[16384];
 int g_prev_count = 0;

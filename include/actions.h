@@ -1,6 +1,8 @@
 #ifndef ACTIONS_H
 #define ACTIONS_H
 
+#include <sys/types.h>
+
 int action_stop(int pid);
 int action_continue_(int pid);
 int action_term(int pid);
