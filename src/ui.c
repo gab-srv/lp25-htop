@@ -17,20 +17,16 @@ static void truncate_with_ellipsis(char *dst, const char *src, int width)
         return;
     }
     if (width <= 3) {
-        /* pas assez de place pour "..." complet => on coupe simplement */
         strncpy(dst, src, width);
         dst[width] = '\0';
         return;
     }
-    /* copier prefixe et ajouter "..." */
     int keep = width - 3;
     strncpy(dst, src, keep);
     dst[keep] = '\0';
     strcat(dst, "...");
 }
 
-/* Affiche une ligne décomposée en colonnes en respectant les largeurs passées.
-   Chaque champ (sauf name) est déjà formaté dans son buffer. */
 static void print_row_columns(int row, int start_col,
                               const char *pid_field, int pid_w,
                               const char *user_field, int user_w,
