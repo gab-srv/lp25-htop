@@ -1,4 +1,3 @@
-/* actions.c : envoi simple de signaux, menu optionnel simplifié */
 #define _GNU_SOURCE
 #include <stdio.h>
 #include <signal.h>
@@ -6,11 +5,10 @@
 #include <errno.h>
 #include <stdlib.h>
 #include <string.h>
-#include <sys/types.h>   /* pour pid_t si besoin */
+#include <sys/types.h>
 
 #include "../include/actions.h"
 
-/* fonctions simples envoyant les signaux */
 int action_stop(int pid){
     return kill((pid_t)pid, SIGSTOP);
 }
@@ -24,7 +22,6 @@ int action_kill_(int pid){
     return kill((pid_t)pid, SIGKILL);
 }
 
-/* Menu d'actions (optionnel) : utilise la fonction restart (définie dans restart.c) */
 void actions_menu(void){
     int reponse = 0;
     int pid = 0;

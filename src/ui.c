@@ -74,8 +74,6 @@ void ui_run()
 
         mvprintw(0, 0, "LP25htop | ↑ ↓ navigate | F5=stop F6=cont F7=term F8=kill | q quit");
 
-        /* Choix des largeurs : on fixe les colonnes numériques/état et on laisse
-           la colonne NAME prendre le reste.*/
         const int pid_w = 6;    /* espace pour PID */
         const int user_w = 14;  /* nom utilisateur */
         const int cpu_w = 6;    /* CPU% */
@@ -84,10 +82,9 @@ void ui_run()
         const int fixed_margin = 5; /* espaces inter-colonnes additionnels */
 
         int used = pid_w + user_w + cpu_w + mem_w + state_w;
-        int name_w = cols - used - fixed_margin - 1; /* -1 pour marge de sécurité */
-        if (name_w < 10) name_w = 10; /* largeur minimale pour NAME */
+        int name_w = cols - used - fixed_margin - 1;
+        if (name_w < 10) name_w = 10;
 
-        /* Entête */
         char hdr_pid[32], hdr_user[32], hdr_cpu[32], hdr_mem[32], hdr_state[32];
         snprintf(hdr_pid, sizeof(hdr_pid), "PID");
         snprintf(hdr_user, sizeof(hdr_user), "USER");
@@ -95,7 +92,6 @@ void ui_run()
         snprintf(hdr_mem, sizeof(hdr_mem), "MEM(KB)");
         snprintf(hdr_state, sizeof(hdr_state), "STATE");
 
-        /* Print header with same column alignment */
         print_row_columns(2, 0,
                           hdr_pid, pid_w,
                           hdr_user, user_w,
@@ -110,14 +106,12 @@ void ui_run()
         for (int i = 0; i < count && row < rows - 1; i++, row++) {
             if (i == selected) attron(A_REVERSE);
 
-            /* Préparer les champs */
             snprintf(pid_field, sizeof(pid_field), "%d", processes[i].pid);
             snprintf(user_field, sizeof(user_field), "%s", processes[i].user);
             snprintf(cpu_field, sizeof(cpu_field), "%0.2f", processes[i].cpu_percent);
             snprintf(mem_field, sizeof(mem_field), "%d", processes[i].memory_kb);
             snprintf(state_field, sizeof(state_field), "%s", processes[i].state);
 
-            /* tronquer proprement le champ name selon la largeur calculée */
             truncate_with_ellipsis(name_trunc, processes[i].name, name_w);
             snprintf(name_field, sizeof(name_field), "%s", name_trunc);
 

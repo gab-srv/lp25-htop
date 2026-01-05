@@ -13,9 +13,4 @@ typedef struct {
     double elapsed_s;
 } process_t;
 
-/*typedef struct process_node {
-    process_t process;
-    struct process_node *next;
-} process_node;*/
-
 #endif
