@@ -1,5 +1,7 @@
 # Projet LP25 - A2025
 
+## ATTENTION ! Il y a deux exécutables après la compilation, il faut bien lancer les deux.
+
 ## Contexte
 
 le projet consiste à concevoir un **programme de gestion de processus pour systèmes Linux**, capable de fonctionner aussi bien **en local que sur des hôtes distants**. L’objectif est de fournir une interface interactive, inspirée de l’outil `htop`, permettant : 
